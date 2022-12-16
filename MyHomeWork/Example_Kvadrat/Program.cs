@@ -1,12 +1,20 @@
-﻿Console.WriteLine("Введите первое число");
-int a = ConvertToConsole.Read();
-Console.WriteLine("Введите второе число");
-int b = Console.Read();
-if (a == b * b)
+﻿//Пишем программу, которая на вход принимает число и 
+//выдает его квадрат
+
+//Console.WriteLine("Введите число");
+//int number = Convert.ToInt32(Console.ReadLine()); //Преобразовываем введенное значение в целочисленное значение с помощью оператора Convert.ToInt32
+//int square = number * number;
+//Console.WriteLine("Квадрат числа "+ number + " будет " + square);
+
+// Более сложный пример, где производится предварительная проверка числа (целое, без букв и тд.)
+Console.WriteLine("Введите число");
+string stringNumber = Console.ReadLine();
+int number;
+while (!int.TryParse (stringNumber, out number))
 {
-    Console.WriteLine("Первое число является квадратом второго");
+    Console.WriteLine("Ошибка! Введите целое число");
+    stringNumber = Console.ReadLine().Trim();
 }
-else
-{
-    Console.WriteLine("Первое число не является квадратом второго");
-}
+int result = number * number;
+Console.WriteLine("квадрат числа "+ number + " равен "+ result);
+

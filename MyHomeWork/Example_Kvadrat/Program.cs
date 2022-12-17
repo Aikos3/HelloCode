@@ -16,5 +16,5 @@ while (!int.TryParse (stringNumber, out number))
     stringNumber = Console.ReadLine().Trim();
 }
 int result = number * number;
-Console.WriteLine("квадрат числа "+ number + " равен "+ result);
+Console.WriteLine($"квадрат числа {number} равен {result}"); //Добавили $ - знак интерполяции 
 

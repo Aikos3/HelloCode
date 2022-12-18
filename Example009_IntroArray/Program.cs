@@ -25,18 +25,52 @@
 //Пример 2.
 // Находим в массиве индекс элемента с определённым значением (например 8).
 
-int[] array = { 1, 22, 8, 4, 5, 6, 7, 8, 9 };
+//int[] array = { 1, 22, 8, 4, 5, 6, 7, 8, 9 };
 
-int n = array.Length;
-int find = 8;
-int index = 0;
+//int n = array.Length;
+//int find = 8;
+//int index = 0;
 
-while (index < n)
- {
-  if (array [index] == find)
+//while (index < n)
+// {
+//  if (array [index] == find)
+//       {
+//          Console.WriteLine(index);
+//          break; // добавляем оператор break, чтобы в случае, если в массиве присутствует несколько элементов с искомым значением, программа вывела индекс только первого найденного
+//        }
+//    index = index +1;
+//}
+
+//Пример 3.
+//
+void FillArray (int [] collection)
+{
+    int length = collection.Length;
+    int index = 0;
+        while (index < length)
         {
-          Console.WriteLine(index);
-          break; // добавляем оператор break, чтобы в случае, если в массиве присутствует несколько элементов с искомым значением, программа вывела индекс только первого найденного
+            collection [index] = new Random().Next(1, 10);
+            index++;
         }
-    index = index +1;
 }
+
+void PrintArray (int [] coll)
+{   
+    int count = coll.Length;
+    int position = 0; 
+        while (position < count)
+        {
+            Console.WriteLine(coll[position]);
+            position++;
+        }
+}
+
+int[] array = new int [10];
+
+FillArray(array);
+PrintArray(array);
+
+//Пример 4.
+//
+//
+

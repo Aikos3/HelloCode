@@ -43,18 +43,48 @@
 
 //Пример 3.
 //
-void FillArray (int [] collection)
-{
-    int length = collection.Length;
-    int index = 0;
+// void FillArray (int [] collection) // Метод, заполняющий массив случайными элементами 
+// {
+//     int length = collection.Length;
+//     int index = 0;
+//         while (index < length)
+//         {
+//             collection [index] = new Random().Next(1, 10);
+//             index++;
+//         }
+// }
+
+// void PrintArray (int [] coll) // Метод, выводящий элементы массива на экран
+// {   
+//     int count = coll.Length;
+//     int position = 0; 
+//         while (position < count)
+//         {
+//             Console.WriteLine(coll[position]);
+//             position++;
+//         }
+// }
+
+// int[] array = new int [10]; // Создаем массив из 10 элементов
+
+// FillArray(array); //Заполняем массив элементами со случайным значенем
+// PrintArray(array); // Выводим на экран
+
+//Пример 4.
+//Находим индекс определёного элемента в массиве, используя метод (функцию) 
+
+void FillArray (int [] collection) // Метод, заполняющий массив случайными элементами 
+ {
+     int length = collection.Length;
+     int index = 0;
         while (index < length)
         {
-            collection [index] = new Random().Next(1, 10);
-            index++;
-        }
-}
+             collection [index] = new Random().Next(1, 10);
+             index++;
+         }
+ }
 
-void PrintArray (int [] coll)
+void PrintArray (int [] coll) // Метод, выводящий элементы массива на экран
 {   
     int count = coll.Length;
     int position = 0; 
@@ -65,12 +95,30 @@ void PrintArray (int [] coll)
         }
 }
 
-int[] array = new int [10];
+int IndexOf (int[] collection, int find)
+{
+    int count = collection.Length;
+    int index = 0;
+    int position = -1; // -1 для того, чтобы в случае, когда искомого элемента не будет в массиве, мы увидели позицию -1, а не 0, как если бы искомый элемент располагался на первой позиции 
+    
+    while(index<count)
+    {
+        if (collection[index] == find)
+        {
+            position = index;
+            break;
+        }
+        index++;
+    }
+    return position;
+}
 
-FillArray(array);
-PrintArray(array);
 
-//Пример 4.
-//
-//
+int[] array = new int [10]; // Создаем массив из 10 элементов
+FillArray(array); //Заполняем массив элементами со случайным значенем
+PrintArray(array); // Выводим на экран
+Console.WriteLine(); // выводим пустую строку, чтобы отделить элементы массива от найденного результата
 
+int pos = IndexOf(array, 4); // пременная pos, в которую кладём результат метода IndexOf - индекс элемента со значением 4 в созданном массиве
+
+Console.WriteLine(pos); // выводим значение pos   

@@ -1,12 +1,5 @@
-﻿
+﻿// Задача 15.
+// Напишите программу, которая принимает на вход цифру, 
+// обозначающую день недели, и проверяет, является ли этот день выходным.
 
-Console.Clear();
-Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
-if (num < 100)
-{
-    Console.WriteLine($"Третьей цифры нет");
-    return;
-}
-int thirdNumber = (num / 100) % 10;
-Console.WriteLine($"Третья цифра числа {num} -> {thirdNumber}");
+

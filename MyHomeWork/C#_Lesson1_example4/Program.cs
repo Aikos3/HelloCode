@@ -8,7 +8,9 @@ Console.WriteLine("Введите третье число");
 int thirdNumber = Convert.ToInt32(Console.ReadLine());
 
 int maxNum = firstNumber;
-if (secondNumber > maxNum) maxNum = secondNumber;
-if (thirdNumber > maxNum) maxNum = thirdNumber;
-    
+if (secondNumber > maxNum)
+    maxNum = secondNumber;
+if (thirdNumber > maxNum)
+    maxNum = thirdNumber;
+
 Console.WriteLine($"Максимальное из трёх чисел: {maxNum}");

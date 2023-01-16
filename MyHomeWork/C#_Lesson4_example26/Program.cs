@@ -3,13 +3,13 @@
 
 int GetDigitCount(int num)
 {
-int digitCount = 1;
-while (num >= 10)
-{
-    num = num / 10;
-    digitCount++;
-}
-return digitCount;
+    int digitCount = 1;
+    while (num >= 10)
+    {
+        num = num / 10;
+        digitCount++;
+    }
+    return digitCount;
 }
 Console.WriteLine("Введите число:");
 int number = Convert.ToInt32(Console.ReadLine());

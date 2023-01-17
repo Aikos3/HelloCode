@@ -3,10 +3,10 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-int[] array = GetBinaryArray(8);
+int[] array = GetArray(8);
 Console.WriteLine($" [ {String.Join(", ", array)} ] ");
 
-int[] GetBinaryArray(int size)
+int[] GetArray(int size)
 {
     int[] result = new int[size];
     for (int i = 0; i < size; i++)

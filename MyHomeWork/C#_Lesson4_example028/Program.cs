@@ -13,7 +13,6 @@ int GetMultiNum(int num)
     return mult;
 }
 ;
-
 Console.WriteLine("Введите число:");
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"Произведение чисел от 1 до {number} = {GetMultiNum(number)}");

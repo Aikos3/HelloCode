@@ -2,9 +2,9 @@
 // с помощью поэлементного копирования
 
 int[] arr = CreateRandomArray(10, 10, 100);
-Console.WriteLine($"[{String.Join(", ", arr)}]");
+Console.WriteLine($" Исходный массив: [{String.Join(", ", arr)}]");
 int[] array = CopyArray(arr);
-Console.WriteLine($"[{String.Join(", ", array)}]");
+Console.WriteLine($" Скопированный массив: [{String.Join(", ", array)}]");
 
 int[] CopyArray(int[] array)
 {

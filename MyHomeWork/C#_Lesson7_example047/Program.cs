@@ -7,12 +7,14 @@
 
 double[,] myArray = new double[3, 4];
 Random random = new Random();
+double minValue = -10;
+double maxValue = 10;
 
 for (int y = 0; y < myArray.GetLength(0); y++)
 {
     for (int x = 0; x < myArray.GetLength(1); x++)
     {
-        myArray[y, x] = Math.Round(random.NextDouble(), 2);
+        myArray[y, x] = Math.Round(new Random().NextDouble() * (maxValue - minValue) + minValue, 2);
     }
     System.Console.WriteLine();
 }

@@ -6,32 +6,34 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-int[,] myArray = new int[5, 5];
-Random random = new Random();
-double sumElement = 0;
+int[,] myArray = new int[5, 5];                         // Задаём размеры массива
+Random random = new Random();                                 
 
-for (int y = 0; y < myArray.GetLength(0); y++)
+// генерируем массив (заполняем значениями)
+for (int y = 0; y < myArray.GetLength(0); y++) // элементы в столбцах
 {
-    for (int x = 0; x < myArray.GetLength(1); x++)
+    for (int x = 0; x < myArray.GetLength(1); x++) // элементы в строках
     {
-        myArray[y, x] = random.Next(0, 10);
+        myArray[y, x] = random.Next(0, 10); // мин и макс значения генерируемых элементов
     }
 }
 
-for (int y = 0; y < myArray.GetLength(0); y++)
+// выводим массив в консоль
+for (int y = 0; y < myArray.GetLength(0); y++) // элементы в столбцах
 {
-    for (int x = 0; x < myArray.GetLength(1); x++)
+    for (int x = 0; x < myArray.GetLength(1); x++) // элементы в строках
     {
-        System.Console.Write(myArray[y, x] + "\t");
+        System.Console.Write(myArray[y, x] + "\t"); // выводим в консоль, добавляем знак табуляции для лучшего восприятия
     }
-    System.Console.WriteLine();
+    System.Console.WriteLine(); // отступ вниз
 }
 
-for (int x = 0; x < myArray.GetLength(1); x++)
+double sumElement = 0; // объявляем переменную (сумма элементов в столбце), которую будем использовать для подсчета среднего арифметического 
+for (int x = 0; x < myArray.GetLength(1); x++) 
 {
-    for (int y = 0; y < myArray.GetLength(0); y++)
+    for (int y = 0; y < myArray.GetLength(0); y++) 
     {
-        sumElement += (myArray[y, x]);
+        sumElement += (myArray[y, x]); // суммируем элементы в столбце, зааписываем в переменную
     }
-    Console.WriteLine($"Среднее арифметическое элементов {x + 1} столбца: {Math.Round(sumElement / myArray.GetLength(0), 2)}");
+    Console.WriteLine($"Среднее арифметическое элементов {x + 1} столбца: {Math.Round(sumElement / myArray.GetLength(0), 2)}"); // выводим на экран текст с результатом
 }
